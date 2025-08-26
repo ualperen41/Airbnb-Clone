@@ -9,11 +9,11 @@ header {
   border-bottom: 1px solid variable.$color-border;
   gap: variable.$space-sm;
   padding: variable.$space-md variable.$space-lg;
-  
+
   @include mixin.desktop {
-    grid-template-areas: "logo logo right"
-    "nav nav nav"
-    ;
+    grid-template-areas:
+      "logo logo right"
+      "nav nav nav";
   }
 
   // Logo
@@ -22,35 +22,35 @@ header {
     display: flex;
     align-items: center;
     gap: variable.$space-xs;
-   img{
-    width: 32px;
-   }
-   span {
-    font-size: variable.$font-md;
-    color: variable.$color-pink;
-    font-weight: 600;
-    @include mixin.tablet {
-        display: none;
+    img {
+      width: 32px;
     }
-   }
+    span {
+      font-size: variable.$font-md;
+      color: variable.$color-pink;
+      font-weight: 600;
+      @include mixin.tablet {
+        display: none;
+      }
+    }
   }
 
   // Navigation
   nav {
-      grid-area: nav;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: variable.$space-lg;
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: variable.$space-lg;
 
-      @include mixin.tablet {
-        display: none;
-      }
-      // Nav Item
-      a {
-        color: variable.$color-black;
-        font-weight: 500;
-      }
+    @include mixin.laptop {
+      display: none;
+    }
+    // Nav Item
+    a {
+      color: variable.$color-black;
+      font-weight: 500;
+    }
   }
 
   //Right
@@ -60,29 +60,28 @@ header {
     align-items: center;
     gap: variable.$space-sm;
     a {
-        font-size: variable.$font-sm;
-        color: variable.$color-black;
-        
+      font-size: variable.$font-sm;
+      color: variable.$color-black;
     }
     .home-text {
-        @include mixin.mobile {
-            display: none;
-        }
+      @include mixin.mobile {
+        display: none;
+      }
     }
     .btn {
-        background: none;
-        cursor: pointer;
-        font-size: variable.$font-md;
-        border: 1px solid variable.$color-border;
-        padding: 10px 15px;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        gap: variable.$space-md;
-        transition: all 0.5s ease-in-out;
-        &:hover {
-            box-shadow: variable.$shadow-lg;
-        }
+      background: none;
+      cursor: pointer;
+      font-size: variable.$font-md;
+      border: 1px solid variable.$color-border;
+      padding: 10px 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: variable.$space-md;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        box-shadow: variable.$shadow-lg;
+      }
     }
   }
 }

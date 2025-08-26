@@ -1,0 +1,46 @@
+@use "../base/variable";
+
+.cards-section {
+  padding: variable.$space-lg variable.$space-lg;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: variable.$space-lg;
+
+  // Card
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: variable.$space-sm;
+    cursor: pointer;
+
+    // Image
+    &-image {
+      position: relative;
+      width: 100%;
+      border-radius: variable.$radius-md;
+
+      &:hover img {
+        scale: 1.03;
+      }
+      img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        border-radius: variable.$radius-md;
+        transition: variable.$transition;
+      }
+
+      // Label
+      .favorite-label {
+       position: absolute;
+        top: variable.$space-sm;
+        left: variable.$space-md;
+        background-color: variable.$color-white;
+        font-size: variable.$font-sm;
+        padding: variable.$space-xs variable.$space-sm;
+        border-radius: variable.$radius-full;
+        box-shadow: variable.$shadow-sm;
+      }
+    }
+  }
+}

@@ -49,7 +49,7 @@ header nav {
   justify-content: center;
   gap: 2rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   header nav {
     display: none;
   }
@@ -87,6 +87,88 @@ header .right .btn {
 }
 header .right .btn:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  overflow: auto;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+.filter-section::-webkit-scrollbar {
+  display: none;
+}
+.filter-section .filter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #777;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.4s ease-in-out;
+}
+.filter-section .filter-item i {
+  font-size: 1.5rem;
+  margin: 0.3rem;
+}
+.filter-section .filter-item:hover {
+  color: #000;
+  font-weight: 700;
+}
+.filter-section .filter-button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid #ddd;
+  padding: 0.6rem 1rem;
+  border-radius: 0.85rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.filter-section .filter-button:hover {
+  background-color: #f7f7f7;
+}
+
+.cards-section {
+  padding: 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.cards-section .card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+.cards-section .card-image {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+}
+.cards-section .card-image:hover img {
+  scale: 1.03;
+}
+.cards-section .card-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.4s ease-in-out;
+}
+.cards-section .card-image .favorite-label {
+  position: absolute;
+  top: 0.6rem;
+  left: 1rem;
+  background-color: #fff;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 body {
