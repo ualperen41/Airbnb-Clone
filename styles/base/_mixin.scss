@@ -1,20 +1,37 @@
+@use "./variable";
 @mixin desktop {
-    @media (max-width:1200px) {
-        @content;
-    }
+  @media (max-width: 1200px) {
+    @content;
+  }
 }
 @mixin laptop {
-    @media (max-width:992px) {
-        @content;
-    }
+  @media (max-width: 992px) {
+    @content;
+  }
 }
 @mixin tablet {
-    @media (max-width:768px) {
-        @content;
-    }
+  @media (max-width: 768px) {
+    @content;
+  }
 }
 @mixin mobile {
-    @media (max-width:576px) {
-        @content;
-    }
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin xs-mobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+//Button
+@mixin button {
+  background-color: #fb385c;
+  color: variable.$color-white;
+  padding: variable.$space-sm variable.$space-lg;
+  border-radius: variable.$radius-md;
+  cursor: pointer;
+  transition: variable.$transition;
 }
